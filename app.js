@@ -7,3 +7,13 @@ const getCityTemperature = (cityName) => {
     .catch(error => consloe.log(error));
 };
 getCityTemperature('dhaka');
+
+// process the data which got from the API 
+const processTempData = (data) => {
+    // destructuring object 
+    const {main, name, weather, } = data;
+
+    document.getElementById('city-name-display-field').innerText = name;
+    document.getElementById('temperature-data-display-field').innerText = main.temp;
+    document.getElementById('weathe-type-display-field').innerText = weather[0].main;
+};
