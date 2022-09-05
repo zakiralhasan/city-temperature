@@ -25,3 +25,10 @@ const getValueFromInputField = () => {
     getSearchField.value = '';
     getCityTemperature(searchFieldValue);
 };
+
+// get search field value by pressed 'Enter' button 
+document.getElementById('search-field').addEventListener('keypress', function(event){
+    if(event.key === 'Enter'){
+        getValueFromInputField();
+    };
+});
