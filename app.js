@@ -32,3 +32,8 @@ document.getElementById('search-field').addEventListener('keypress', function(ev
         getValueFromInputField();
     };
 });
+
+// get search field value by clicking search button 
+document.getElementById('search-btn').addEventListener('click', function(){
+    getValueFromInputField();
+});
