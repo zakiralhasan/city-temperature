@@ -17,3 +17,11 @@ const processTempData = (data) => {
     document.getElementById('temperature-data-display-field').innerText = main.temp;
     document.getElementById('weathe-type-display-field').innerText = weather[0].main;
 };
+
+// get and process search field value 
+const getValueFromInputField = () => {
+    const getSearchField = document.getElementById('search-field');
+    const searchFieldValue = getSearchField.value;
+    getSearchField.value = '';
+    getCityTemperature(searchFieldValue);
+};
